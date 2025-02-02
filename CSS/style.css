@@ -127,7 +127,7 @@ p {
 }
 
 .not-available {
-  opacity: 0.7 !important;
+  opacity: 0.5 !important;
   cursor: no-drop !important;
   position: relative;
   overflow: hidden;

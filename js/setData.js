@@ -1,4 +1,3 @@
-//
 setTermData(data);
 
 //
@@ -29,21 +28,11 @@ function setTermData(data) {
 }
 
 function setSubjectData(subject) {
-  let bookStatus = `"`;
-  let vedioStatus = `"`;
-  let examsStatus = `"`;
+  let dataStatus = `"`;
 
   subject.dataUrl
-    ? (bookStatus = `" href="${subject.dataUrl}" `)
-    : (bookStatus = ` not-available"`);
-
-  subject.videoUrl
-    ? (vedioStatus = `" href="${subject.videoUrl}" `)
-    : (vedioStatus = ` not-available"`);
-
-  subject.examsUrl
-    ? (examsStatus = `" href="${subject.examsUrl}" `)
-    : (examsStatus = ` not-available"`);
+    ? (dataStatus = `" href="${subject.dataUrl}" `)
+    : (dataStatus = ` not-available"`);
 
   const card = `
   <div class="card">
@@ -51,9 +40,7 @@ function setSubjectData(subject) {
       <h3>${subject.name}</h3>
       <hr>
       <div class="subjects">
-        <a class="my-btn${bookStatus}>الملازم والكتب</a>
-        <a class="my-btn${vedioStatus}>الفيديوهات</a>
-        <a class="my-btn${examsStatus}>الأمتحانات</a>
+        <a class="my-btn${dataStatus}>الملازم والكتب والأمتحانات</a>
       </div>
     </div>
   </div>
