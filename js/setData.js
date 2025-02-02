@@ -31,7 +31,7 @@ function setSubjectData(subject) {
   let dataStatus = `"`;
 
   subject.dataUrl
-    ? (dataStatus = `" href="${subject.dataUrl}" `)
+    ? (dataStatus = `" href="${subject.dataUrl}" target="_blank" `)
     : (dataStatus = ` not-available"`);
 
   const card = `
